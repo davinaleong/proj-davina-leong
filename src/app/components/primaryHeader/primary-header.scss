@@ -1,0 +1,29 @@
+/// Primary Header
+
+.primary-header {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      gap: var(--spacer-primary);
+
+      a {
+        --_a-spacer-inline: var(--spacer-primary);
+        --_a-spacer-block-start: var(--spacer-lg);
+        --_a-spacer-block-end: var(--spacer-primary);
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding-block-start: var(--_a-spacer-block-start);
+        padding-block-end: var(--_a-spacer-block-end);
+        padding-inline-start: var(--_a-spacer-inline-start);
+        padding-inline-end: var(--_a-spacer-inline-end);
+      }
+    }
+  }
+}

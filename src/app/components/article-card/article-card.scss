@@ -1,0 +1,12 @@
+.article-card {
+  &__image {
+    border-radius: theme("borderRadius.sm");
+    margin-inline: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+
+  &__label {
+    text-align: center;
+  }
+}

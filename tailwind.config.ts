@@ -1,4 +1,4 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 const config: Config = {
   content: [
@@ -8,13 +8,90 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        dlBlue: {
+          50: "#e6ebf6",
+          100: "#cdd7ed",
+          200: "#9ab0db",
+          300: "#6888ca",
+          400: "#3561b8",
+          500: "#0339a6",
+          600: "#022e85",
+          700: "#022264",
+          800: "#011742",
+          900: "#010b21",
+          950: "#000611",
+        },
+        dlGuardBlue: {
+          50: "#e8eef6",
+          100: "#d1dded",
+          200: "#7499ca",
+          300: "#6888ca",
+          400: "#4577b8",
+          500: "#1755a6",
+          600: "#124485",
+          700: "#0e3364",
+          800: "#092242",
+          900: "#051121",
+          950: "#020811",
+        },
+        dlBoyBlue: {
+          50: "#f4f8fb",
+          100: "#e9f1f7",
+          200: "#d3e2f0",
+          300: "#bdd4e8",
+          400: "#a7c5e1",
+          500: "#7492ae",
+          600: "#576e82",
+          700: "#3a4957",
+          800: "#092242",
+          900: "#1d252b",
+          950: "#0e1216",
+        },
+        dlOrange: {
+          50: "#f4f8fb",
+          100: "#e9f1f7",
+          200: "#e8c19f",
+          300: "#e4b78f",
+          400: "#e1ad7f",
+          500: "#d9985f",
+          600: "#ae7a4c",
+          700: "#ae7a4c",
+          800: "#825b39",
+          900: "#2b1e13",
+          950: "#160f09",
+        },
+      },
+      fontFamily: {
+        base: ["Roboto", "Tahoma", "Arial", "Helvetica", "sans-serif"],
+        heading: ["'Maven Pro'", "Verdana", "Helvetica", "Arial", "sans-serif"],
+      },
+      fontSize: {
+        "2xs": "clamp(0.64rem, calc(0.66rem + 0.02vw), 0.65rem)",
+        xs: "clamp(0.78rem, calc(0.77rem + 0.03vw), 0.8rem)",
+        sm: "clamp(0.94rem, calc(0.92rem + 0.11vw), 1rem)",
+        base: "clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem)",
+        lg: "clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem)",
+        xl: "clamp(1.62rem, calc(1.5rem + 0.58vw), 1.95rem)",
+        "2xl": "clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem)",
+        "3xl": "clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem)",
+        "4xl": "clamp(2.8rem, calc(2.45rem + 1.77vw), 3.82rem)",
+        "5xl": "clamp(3.36rem, calc(2.87rem + 2.45vw), 4.77rem)",
+      },
+      spacing: {
+        0: "0em",
+        1: "clamp(0.13em, calc(0.13em + 0vw), 0.13em)",
+        2: "clamp(0.31em, calc(0.31em + 0vw), 0.31em)",
+        3: "clamp(0.56em, calc(0.54em + 0.11vw), 0.63em)",
+        4: "clamp(0.88em, calc(0.85em + 0.11vw), 0.94em)",
+        5: "clamp(1.13em, calc(1.08em + 0.22vw), 1.25em)",
+        6: "clamp(1.69em, calc(1.62em + 0.33vw), 1.88em)",
+        7: "clamp(2.25em, calc(2.16em + 0.43vw), 2.5em)",
+        8: "clamp(3.38em, calc(3.24em + 0.65vw), 3.75em)",
+        9: "clamp(4.5em, calc(4.33em + 0.87vw), 5em)",
+        10: "clamp(6.75em, calc(6.49em + 1.3vw), 7.5em)",
       },
     },
   },
-  plugins: [],
-};
-export default config;
+}
+export default config

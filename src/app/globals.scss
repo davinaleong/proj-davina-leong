@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  // Maven Pro
+  @font-face {
+    font-family: "Maven Pro";
+    font-weight: variable-exists($name: MavenPro-VariableFont_wght);
+    font-display: swap;
+    src: url(./assets/fonts/maven_pro/MavenPro-VariableFont_wght.ttf)
+      format(truetype);
+  }
+
+  // Roboto
+  @font-face {
+    font-family: "Roboto";
+    font-weight: variable-exists($name: RobotoFlex-VariableFont_wght);
+    font-display: swap;
+    src: url(./assets/fonts/roboto/RobotoFlex-VariableFont_wght.ttf)
+      format(truetype);
+  }
+}
+
+:root {
+  --header-height: 6.4em;
+  --footer-height: 6.3em;
+  --wrapper-width: theme("screens.lg");
+  --flow-spacer: var(--spacer-primary);
+
+  --clr-fg: theme("colors.black");
+  --clr-bg: theme("colors.white");
+  --clr-a: theme("colors.dlBlue.500");
+  --clr-a-hover: theme("colors.dlBlue.600");
+
+  --clr-header-bg: theme("colors.dlBlue.100");
+  --clr-careers-fg: theme("colors.white");
+  --clr-careers-bg: theme("colors.dlBlue.500");
+  --clr-freelance-fg: theme("colors.black");
+  --clr-freelance-bg: theme("colors.dlBoyBlue.500");
+  --clr-input-bg: theme("colors.neutral.100");
+
+  --clr-focus: theme("colors.black");
+  --clr-focus-alt: theme("colors.white");
+
+  --ff-primary: theme("fontFamily.base");
+  --ff-secondary: theme("fontFamily.heading");
+
+  --spacer-primary: theme("spacing.4");
+  --spacer-secondary: theme("spacing.2");
+  --spacer-lg: theme("spacing.7");
+  --spacer-xl: theme("spacing.8");
+
+  --fs-base: theme("fontSize.base");
+  --fs-heading-1: theme("fontSize.5xl");
+  --fs-heading-2: theme("fontSize.4xl");
+  --fs-heading-3: theme("fontSize.3xl");
+  --fs-heading-4: theme("fontSize.2xl");
+  --fs-heading-5: theme("fontSize.xl");
+  --fs-heading-6: theme("fontSize.lg");
+  --fs-micro-copy: theme("fontSize.sm");
+
+  --lh-base: theme("lineHeight.relaxed");
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+:focus {
+  outline: thin solid var(--clr-focus);
+  border: thin solid var(--clr-focus-alt);
+  border-radius: theme("borderRadius.sm");
+  overflow: hidden;
+}
+
+body {
+  color: var(--clr-fg);
+  background-color: var(--clr-bg);
+  font-size: var(--fs-base);
+  font-family: var(--ff-primary);
+  line-height: var(--lh-base);
+}
+
+a {
+  --_a-clr: var(--clr-a);
+  --_a-decoration: underline;
+
+  --_a-hover-clr: var(--clr-a-hover);
+  --_a-hover-decoration: underline;
+
+  color: var(--_a-clr);
+  text-decoration: var(--_a-decoration);
+
+  &:active,
+  &:visited {
+    color: var(--_a-clr);
+    text-decoration: var(--_a-decoration);
+  }
+
+  &:hover {
+    color: var(--_a-hover-clr);
+    text-decoration: var(--_a-hover-decoration);
+  }
+}
+
+main {
+  --_main-spacer: var(--spacer-primary);
+
+  padding-inline-start: var(--_main-spacer);
+  padding-inline-end: var(--_main-spacer);
+  padding-block-start: var(--_main-spacer);
+  padding-block-end: var(--_main-spacer);
+}
+
+.wrapper {
+  --_wrapper-width: calc(var(--wrapper-width) - (var(--spacer-primary) * 2));
+
+  width: min(100% - (var(--spacer-primary) * 2), var(--_wrapper-width));
+
+  &-centered {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+  }
+}
+
+.q-container {
+  container-type: inline-size;
+
+  &-main {
+    container-name: q-container-main;
+  }
+
+  &-wrapper {
+    container-name: q-wrapper;
+  }
+}
+
+.flow {
+  --_flow-spacer: var(--flow-spacer);
+
+  & > * + * {
+    margin-block-start: var(--_flow-spacer);
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--ff-secondary);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

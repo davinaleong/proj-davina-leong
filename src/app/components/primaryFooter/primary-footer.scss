@@ -1,0 +1,12 @@
+/// Primary Footer
+
+.primary-footer {
+  --_footer-spacer-inline: var(--spacer-primary);
+  --_footer-spacer-block-start: var(--spacer-primary);
+  --_footer-spacer-block-end: var(--spacer-xl);
+
+  &__wrapper {
+    padding-block-start: var(--_footer-spacer-block-start);
+    padding-block-end: var(--_footer-spacer-block-end);
+  }
+}

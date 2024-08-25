@@ -1,0 +1,22 @@
+/// Page Header
+
+.page__header {
+  --_page-header-clr: theme("colors.neutral.900");
+  --_page-header-bg-clr: theme("colors.dlBlue.100");
+  --_page-header-br-spacer: theme("spacing.2");
+  --_page-spacer: var(--spacer-primary);
+
+  color: var(--_page-header-clr);
+  background-color: var(--_page-header-bg-clr);
+  border-radius: var(--_page-header-br-spacer);
+  padding-block-start: var(--_page-spacer);
+  padding-block-end: var(--_page-spacer);
+  padding-inline-start: var(--_page-spacer);
+  padding-inline-end: var(--_page-spacer);
+
+  &__h1 {
+    font-size: var(--fs-heading-2);
+    font-family: var(--ff-secondary);
+    font-weight: theme("fontWeight.bold");
+  }
+}
