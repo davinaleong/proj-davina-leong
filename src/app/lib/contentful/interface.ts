@@ -1,7 +1,8 @@
 import LibContentfulEnvVars, {
   LibContentfulEnvVarsInterface,
 } from "./variables"
-import LibContentfulSdk, { LibContentfulSdkInterface } from "./sdk"
+import LibContentfulSdk, { LibContentfulSdkInterface } from "."
+import { LibContentfulTypes } from "./types"
 
 export interface LibContentfulInterface {
   LibContentfulEnvVars: LibContentfulEnvVarsInterface

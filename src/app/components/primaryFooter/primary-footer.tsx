@@ -1,4 +1,4 @@
-import LibEnvVariables from "@/app/lib/contentful/env/env"
+import LibEnvVariables from "@/app/lib/env/env"
 import "./primary-footer.scss"
 
 const { APP_NAME, APP_AUTHOR, APP_YEAR } = LibEnvVariables

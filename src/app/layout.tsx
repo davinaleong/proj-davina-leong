@@ -5,7 +5,7 @@ import "./globals.scss"
 import PrimaryHeader from "./components/primaryHeader/primary-header"
 import PrimaryFooter from "./components/primaryFooter/primary-footer"
 
-import LibEnvVariables from "./lib/contentful/env/env"
+import LibEnvVariables from "./lib/env/env"
 
 const { APP_NAME, APP_DESCRIPTION } = LibEnvVariables
 

@@ -13,8 +13,23 @@ import {
   faFileText,
   faFileImage,
 } from "@fortawesome/free-solid-svg-icons"
+import { getContentfulEntries } from "./lib/contentful"
+import LibContentfulTypes from "./lib/contentful/types"
 
-export default function Home() {
+async function getLatestFourProjects() {
+  return await getContentfulEntries(LibContentfulTypes.projects, 4)
+}
+
+async function getLatestSixArticles() {
+  return await getContentfulEntries(LibContentfulTypes.articles, 6)
+}
+
+export default async function Home() {
+  const projects = await getLatestFourProjects()
+  const articles = await getLatestSixArticles()
+
+  // TODO: Render projects
+  // TODO: Render articles
   return (
     <main className="page page__main">
       <div className="wrapper wrapper-centered main__wrapper page__wrapper q-container q-container-wrapper | flow">
