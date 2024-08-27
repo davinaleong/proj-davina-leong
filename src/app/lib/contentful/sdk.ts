@@ -14,11 +14,12 @@ export const client: ContentfulClientApi<undefined> = createClient({
 
 export async function getContentfulEntries(
   slug: string = "",
-  contentType: string = ""
+  contentType: string = "",
+  limit: number = 1
 ) {
   let object: any = {
     content_type: contentType,
-    limit: Number(CONTENTFUL_LIMIT),
+    limit,
   }
   if (slug !== "") {
     object = {
