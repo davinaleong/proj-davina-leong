@@ -28,7 +28,8 @@ export default async function Home() {
   const projects = await getLatestFourProjects()
   const articles = await getLatestSixArticles()
 
-  // TODO: Render projects
+  console.log(`articles`, articles)
+
   // TODO: Render articles
   return (
     <main className="page page__main">
@@ -50,10 +51,9 @@ export default async function Home() {
             </p>
           </PageHeader>
 
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {projects.map((project: any, index: number) => (
+            <ProjectCard key={`p${index}`} project={project} />
+          ))}
 
           <p className="text-center">
             <Link href="">{`See more projects >>`}</Link>
@@ -199,12 +199,9 @@ export default async function Home() {
           <h2 className="text-2xl">{`Latest articles...`}</h2>
 
           <div className="article-grid">
-            <ArticleCard />
-            <ArticleCard />
-            <ArticleCard />
-            <ArticleCard />
-            <ArticleCard />
-            <ArticleCard />
+            {articles.map((article: any, index: number) => (
+              <ArticleCard key={`a${index}`} article={article} />
+            ))}
           </div>
         </section>
         {/* ./header-grid */}
