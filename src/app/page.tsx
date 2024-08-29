@@ -28,9 +28,6 @@ export default async function Home() {
   const projects = await getLatestFourProjects()
   const articles = await getLatestSixArticles()
 
-  console.log(`articles`, articles)
-
-  // TODO: Render articles
   return (
     <main className="page page__main">
       <div className="wrapper wrapper-centered main__wrapper page__wrapper q-container q-container-wrapper | flow">
