@@ -16,6 +16,9 @@ import {
 import { getContentfulEntries } from "./lib/contentful"
 import LibContentfulTypes from "./lib/contentful/types"
 
+import "page.scss"
+import "page-home.scss"
+
 async function getLatestFourProjects() {
   return await getContentfulEntries(LibContentfulTypes.projects, 4)
 }
